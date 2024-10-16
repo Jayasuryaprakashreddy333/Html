@@ -1,0 +1,80 @@
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Our Services</title>
+ 
+  <script src="https://cdn.tailwindcss.com"></script>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+
+  <style>
+    .rotate {
+      transition: transform 1s;
+      transform-style: preserve-3d;
+    }
+  </style>
+</head>
+<body class="bg-gray-100">
+
+  <div id="assignment">
+    <div class="bg-gradient-to-r from-purple-900 via-purple-800 to-white bg-cover p-20">
+      <h2 class="text-3xl font-bold text-start mb-10 text-white">Our Services</h2>
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+        
+        <div class="service-card bg-white shadow-lg rounded-lg p-6 text-center rotate">
+          <div class="flex justify-center mb-4">
+            <img src="https://play-lh.googleusercontent.com/PeD1OQCk_CsiCHzuyYUL6tFBbL2QTsZrIBiaT7NWA5GoMLcTJurfEF-yvqvcH7UYE1G3" alt="Icon" class="w-16 h-16 rounded-full">
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Emergency Plumbing Services</h3>
+          <p class="text-gray-600 mb-4">Our plumbers are ready to go 24/7 for emergencies - including nights, weekends, and holidays.</p>
+          <a href="#" class="text-purple-600 font-bold hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="service-card bg-white shadow-lg rounded-lg p-6 text-center rotate">
+          <div class="flex justify-center mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/128/8574/8574285.png" alt="Icon" class="w-16 h-16 rounded-full">
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Plumbing and Drains</h3>
+          <p class="text-gray-600 mb-4">We make thousands of repairs every day, ensuring top plumbing and drain services.</p>
+          <a href="#" class="text-purple-600 font-bold hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="service-card bg-white shadow-lg rounded-lg p-6 text-center rotate">
+          <div class="flex justify-center mb-4">
+            <img src="https://is4-ssl.mzstatic.com/image/thumb/Purple4/v4/e3/32/2f/e3322f43-75e0-f228-cc75-85e496aef7d0/Inkist-icon-simple-mac.png/100x100bb-85.jpg" alt="Icon" class="w-16 h-16 rounded-full">
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Water Damage</h3>
+          <p class="text-gray-600 mb-4">Our teams are equipped with state-of-the-art water extraction and cleanup equipment.</p>
+          <a href="#" class="text-purple-600 font-bold hover:underline">Explore this service ></a>
+        </div>
+
+        <div class="service-card bg-white shadow-lg rounded-lg p-6 text-center rotate">
+          <div class="flex justify-center mb-4">
+            <img src="https://cdn-icons-png.flaticon.com/512/4539/4539684.png" alt="Icon" class="w-16 h-16 rounded-full">
+          </div>
+          <h3 class="text-xl font-semibold text-gray-800 mb-2">Water Heaters</h3>
+          <p class="text-gray-600 mb-4">Trust us for repair and replacement of gas, electric, and tankless water heaters.</p>
+          <a href="#" class="text-purple-600 font-bold hover:underline">Explore this service ></a>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const cards = document.querySelectorAll('.service-card');
+    cards.forEach(card => {
+      card.addEventListener('mouseenter', () => {
+        anime({
+          targets: card,
+          rotateY: '+=360deg',
+          duration: 1000,
+          easing: 'easeInOutQuad'
+        });
+      });
+    });
+  </script>
+
+</body>
+</html>
